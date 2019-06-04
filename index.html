@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+      <div class="d-flex">
+          <div class="cell border" style="background-color: green; height: 100px; width: 100px;"></div>
+          <div class="cell border" style="background-color: green; height: 100px; width: 100px;"></div>
+          <div class="cell border" style="background-color: green; height: 100px; width: 100px;"></div>
+      </div>
+      <script>
+          let cells = document.querySelectorAll(".cell")
+          let rand = Math.random()*2
+          let round = Math.round(rand)
+          cells[round].myKey = "random"
+          for(let index = 0; index<3; index = index + 1){
+            cells[index].onclick = function(){
+             if(cells[index].myKey == "random" ){
+                alert("правильно")
+                }else{
+                  alert("wrong")
+                }
+              }
+            }
+         
+      </script>
+  </body>
+</html>
